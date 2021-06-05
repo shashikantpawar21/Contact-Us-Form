@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Email Template</title>
+  </head>
+  <body>
+    <span id="toast-message" class="toast"></span>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" style="color: gray; margin-top: -20px"
+          >&times;</span
+        >
+        <p
+          id="send-mail-status"
+          style="
+            background-color: green;
+            color: white;
+            padding: 10px;
+            text-align: center;
+          "
+        >
+          Mail Sent Successfully
+        </p>
+        <p id="summary">Details Summary</p>
+        <div id="summary-details">
+          <p>Name <br /><span id="show-name"></span></p>
+          <p>
+            Email <br />
+            <span id="show-email"></span>
+          </p>
+          <p>Mobile no <br /><span id="show-mobile-no"></span></p>
+        </div>
+      </div>
+    </div>
+    <h1>Contact us</h1>
+    <p>Your details will be sent to form owner</p>
+    <form class="contact-form">
+      <label for="">Name</label><br />
+      <input
+        id="txt-name"
+        class="name"
+        type="text"
+        maxlength="200"
+        placeholder="Name"
+        oninput="allowLettersAndSpaceOnly(this)"
+        onblur="validateNameRequired()"
+      /><br />
+      <span id="error-name"></span><br />
+      <label for="">Email</label><br />
+      <input
+        id="txt-email"
+        class="email"
+        type="email"
+        placeholder="Email"
+        oninput="validateEmail()"
+        onblur="validateEmail()"
+      /><br />
+      <span id="error-email"></span><br />
+      <label for="">Mobile number</label><br />
+      <input
+        id="txt-mobile-number"
+        class="email"
+        type="text"
+        maxlength="10"
+        placeholder="Mobile number"
+        oninput="allowNumbersOnly(this)"
+        onblur="validateMobileNumberLength()"
+      /><br />
+      <span id="error-mobile-number"></span><br />
+      &nbsp;&nbsp;
+      <button id="btn-submit" type="submit" onclick="validateForm(event)">
+        Send Mail
+      </button>
+    </form>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_xRsSJDcKPzVqrnAIHYtvX");
+      })();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

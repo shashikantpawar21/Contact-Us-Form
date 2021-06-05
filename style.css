@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: inter;
+  font-weight: normal;
+  background: rgb(245, 245, 245);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 35px;
+}
+
+p {
+  text-align: center;
+  margin: 15px auto 0px auto;
+  font-size: 16px;
+  width: 80%;
+}
+.contact-form {
+  margin: 35px auto 0px auto;
+  width: 80%;
+}
+
+.contact-form label {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.contact-form span {
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.contact-form input {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: rgb(255, 255, 255);
+  font-size: 18px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.contact-form input:focus {
+  border-bottom: 2px solid #1a883f;
+}
+
+.contact-form button {
+  font-size: 19px;
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  padding: 12px 20px;
+  background-color: #22b352;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-bottom: 3px solid #1a883f;
+}
+
+.contact-form button:hover {
+  background-color: #1a883f;
+  border-bottom: 3px solid #22b352;
+}
+
+@media all and (min-width: 1000px) {
+  .contact-form {
+    width: 40%;
+  }
+  /* .modal-content {
+    width: 80%;
+  } */
+}
+
+@media all and (min-width: 1080px) {
+  .contact-form {
+    width: 30%;
+  }
+  .modal-content {
+    width: 29%;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  /* .contact-form {
+    width: 40%;
+  } */
+  .modal-content {
+    width: 29%;
+  }
+}
+
+/* //////////////////////////////////////////////// */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  padding-left: 20px; /* Location of the box */
+  padding-right: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content p {
+  text-align: left;
+  padding: 10px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+
+  /* width: auto; */
+  /* margin-top: 200px; */
+  margin-left: auto;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

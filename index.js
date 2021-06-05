@@ -40,7 +40,7 @@ function sendMail() {
   const currentFormatedDate = getFormatedDate();
   userName = nameElement.value.replace(/\s\s+/g, " ");
   let mailParams = {
-    to_name: "Shashi",
+    to_name: "Team",
     user_name: userName,
     email_address: emailElement.value,
     mobile_no: mobileNoElement.value,
@@ -52,7 +52,7 @@ function sendMail() {
   submitButton.innerText = "Sending Mail ....";
   isLoading = true;
 
-  emailjs.send("service_u8k5nc", "template_af4cowi", mailParams).then(
+  emailjs.send("service_u8k5ncc", "template_af4cowi", mailParams).then(
     function (res) {
       submitButton.innerText = "Send Mail";
       submitButton.style.backgroundColor = "#22b352";
